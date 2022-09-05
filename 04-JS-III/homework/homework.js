@@ -77,10 +77,10 @@ function agregarNumeros(numeros) {
   // Suma todos los enteros y devuelve el valor
   // Tu código:
   
-  let suma;
+  let suma = 0;
 
   for (let i = 0; i < numeros.length; i++) {    
-    suma = suma + numeros[i]      
+    suma += numeros[i]      
   }
   return suma;
 }
@@ -90,7 +90,7 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:  
-  let suma;
+  let suma = 0;
 
   for (let i = 0; i < resultadosTest.length; i++) {    
     suma = suma + resultadosTest[i]      
@@ -149,9 +149,9 @@ function diaDeLaSemana(numeroDeDia) {
   let dia = ['Sabado','Domingo','Lunes','Martes','Miercoles','Jueves','Viernes']
 
     if(numeroDeDia === 1 || numeroDeDia === 7){
-      return dia[numeroDeDia] + 'Es fin de semana'
+      return 'Es fin de semana'
     }else{
-      return dia[numeroDeDia] + 'Es dia laboral'
+      return 'Es dia Laboral'
     }  
   
 } 
@@ -213,6 +213,14 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  let arreglo = [];
+  for(let i = 0 ; i < array.length; i++){
+    if(array[i] > 100){
+      arreglo.push(array[i])
+    }    
+  }
+   return arreglo
+
 }
 
 
@@ -224,6 +232,17 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  let arreglo = [];
+
+  for(var i = 0; i < 10 ; i++){
+    numero += 2
+    if(i === numero){
+      return 'Se interrumpió la ejecución'           
+    }else 
+    arreglo.push(numero)     
+  }   
+  return arreglo 
+
 }
 
 
@@ -234,6 +253,16 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  let arreglo = [];  
+  let i = 0;
+  while(i < 10){
+    i ++;
+    if(i == 5)
+      continue;
+      arreglo.push(numero += 2)
+  }
+  return arreglo
+
 }
 
 
